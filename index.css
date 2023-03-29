@@ -1,0 +1,141 @@
+body{
+
+    margin:0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+#nav1{
+
+display: flex;
+justify-content: space-between;
+align-items: center;
+width: 95%;
+margin: auto;
+box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;
+
+}
+#language{
+
+    border: none;
+    background-color: white;
+    color: black;
+    padding: 2px;
+}
+
+.option{
+    font-size: 20px;
+    color: black;
+    /* background-color: white; */
+    
+}
+
+#nav1 #block1{
+display: flex;
+}
+#nav1 #block1 > .fb{
+    width:150px;
+    display: flex;
+    justify-content: space-around;
+   
+
+}
+#nav1 #block1 > .fb > a >img{
+    width:25px;
+    height: 25px;
+    margin: auto;
+}
+
+#nav1 #block1 > .fb > a{
+
+display:inline-flex;
+align-items: center;
+justify-content: space-evenly;
+
+}
+#nav1 #block1 > .fb >p:hover{
+   cursor: pointer;
+}
+
+#nav2{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    width:95%;
+    margin:auto;
+}
+
+#nav2 > #first{
+    width: 32%;
+    display: inline-flex;
+    justify-content: space-between;
+    align-items: center;
+    /* border: 2px solid red; */
+
+}
+
+#nav2 > #middle{
+    width: 150px;
+    height: 80px;
+    /* border: 2px solid red; */
+    margin-right:200px ;
+}
+#nav2 > #last{
+    width:200px;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+
+  }
+  
+  /* .dropdown-product {
+    font-size: 16px;
+    color: #666;
+    text-decoration: none;
+    padding: 10px 20px;
+    cursor: pointer;
+  } */
+  .dropdown-product >a{
+    text-decoration: none;
+    padding: 10px 10px;
+    font-size: 20px;
+    color: black;
+  }
+  
+  .dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 1;
+    background-color: #f2f2f2;
+    padding: 10px;
+    min-width: 200px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .dropdown:hover .dropdown-menu {
+    display: block;
+  }
+  
+  .dropdown-item {
+    display: block;
+    color: #666;
+    text-decoration: none;
+    padding: 5px 0;
+  }
+
+#nav2 > #last >div > img{
+    width:40px;
+    height:40px;
+}
+
+
+
+
