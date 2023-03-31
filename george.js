@@ -161,18 +161,29 @@ let arr =[
 
     },
 
-
-
-    
-
-
-    
-    
-  
-
 ]
 
-// 	https://cdn.shopify.com/s/files/1/0677/1464/6315/files/George_thomas_artworks4.jpg?v=1676617973 first
-// 	https://cdn.shopify.com/s/files/1/0677/1464/6315/f…rtist_edite_sections_3.jpg?v=1677675569&width=940 second_first
-// https://cdn.shopify.com/s/files/1/0677/1464/6315/f…t_edite_sections_re-01.jpg?v=1675945931&width=940 second-sec
-// https://cdn.shopify.com/s/files/1/0677/1464/6315/f…4dda-a282-f977bab2532f.jpg?v=1675862765&width=940 third
+let container=document.getElementById("container")
+
+arr.forEach(element => {
+    let card=document.createElement("div")
+   let image=document.createElement("img")
+   image.src=element.image;
+
+   let brand=document.createElement("p")
+    brand.innerText=element.brand;
+
+   let product=document.createElement("h3")
+   product.innerText=element.product;
+
+   let price=document.createElement("h3")
+    price.innerText=element.price
+
+    let addToCart=document.createElement("button")
+    addToCart.innerText="AddToCart"
+
+    
+
+    card.append(image,brand,product,price,addToCart)
+    container.append(card)
+});
