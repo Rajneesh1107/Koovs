@@ -135,6 +135,10 @@ justify-content: space-evenly;
     width:40px;
     height:40px;
 }
+#nav2 > #last >div > a > img{
+  width:40px;
+  height:40px;
+}
 
 #container{
     margin: auto;

@@ -4,9 +4,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>Document</title>
-    <link rel="stylesheet" href="./george.css">
+    <link rel="stylesheet" href="./login.css">
+    
 </head>
 <body>
     <div id="nav1">
@@ -33,7 +33,7 @@
         <div class="dropdown">
             <div class="dropdown-product"><a href="#">Mens</a></div>
             <div class="dropdown-menu">
-              <div class="dropdown-item">Shirts</div>
+              <div class="dropdown-item"><a href="./george.html">T-Shirts</a></div>
               <div class="dropdown-item">Pants</div>
               <div class="dropdown-item">Shoes</div>
               <div class="dropdown-item">Jackets</div>
@@ -52,9 +52,8 @@
         <div class="dropdown">
             <div class="dropdown-product"><a href="#">Artist Collab</a></div>
             <div class="dropdown-menu">
-              <div class="dropdown-item">Paintings</div>
-              <div class="dropdown-item">Sculptures</div>
-              <div class="dropdown-item">Photography</div>
+              <div class="dropdown-item">George Thomas</div>
+              <div class="dropdown-item">Booranng</div>
             </div>
         </div>
           
@@ -74,18 +73,22 @@
         </div>
         <div id="last">
             <div><img src="https://www.flaticon.com/svg/vstatic/svg/3917/3917132.svg?token=exp=1680098878~hmac=942bf592c955b53992857671e34386e5" alt=""></div>
-            <div><a href="./signUp.html"><img src="https://cdn.vectorstock.com/i/1000x1000/08/56/user-profile-login-or-access-authentication-icon-vector-28920856.webp" alt=""></a></div>
+            <div><a href="./login.html"><img src="https://cdn.vectorstock.com/i/1000x1000/08/56/user-profile-login-or-access-authentication-icon-vector-28920856.webp" alt=""></a></div>
             <div><img src="https://media.istockphoto.com/id/1206806317/vector/shopping-cart-icon-isolated-on-white-background.jpg?s=612x612&w=0&k=20&c=1RRQJs5NDhcB67necQn1WCpJX2YMfWZ4rYi1DFKlkNA=" alt=""></div>
         </div>
     </div>
-    <select  id="filter">
-        <option value="">Select</option>
-        <option value="High To Low">Price High to Low</option>
-        <option value="Low To High">Price Low to High</option>
-    </select>
-    <div id="container">
-
+    
+    <div class="login-box">
+        <h2>Login</h2>
+        <form>
+            <label>Email</label>
+            <input type="text" placeholder="Enter your email" id="email">
+            <label>Password</label>
+            <input type="password" placeholder="Enter your Password" id="Password">
+            <input type="submit" value="Login">
+        </form>
     </div>
+    <p>Not have an account?<a href="./signup.html">Sign Up here</a></p>
 
     <div id="foot1">
         <div>
@@ -131,9 +134,8 @@
         <p>© NEWBRAVE VENTURE PRIVATE LIMITED</p>
         <img  class="footer" src="https://europeandesign.s3.eu-central-1.amazonaws.com/uploads/2023/02/14180021/credit-cards-logos_635.png" alt="">
     </div>
-
 </body>
-<script src="./george.js">
+<script src="./login.js">
 
 </script>
 </html>
