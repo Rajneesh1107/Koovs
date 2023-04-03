@@ -4,9 +4,240 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./index.css">
-    <title>Document</title>
-    
+    <title>Payment</title>
+    <style>
+        body{
+
+margin:0px;
+padding: 0px;
+box-sizing: border-box;
+}
+
+#nav1{
+
+display: flex;
+justify-content: space-between;
+align-items: center;
+width: 95%;
+margin: auto;
+box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;
+
+}
+#language{
+
+border: none;
+background-color: white;
+color: black;
+padding: 2px;
+}
+
+.option{
+font-size: 20px;
+color: black;
+/* background-color: white; */
+
+}
+
+#nav1 #block1{
+display: flex;
+}
+#nav1 #block1 > .fb{
+width:150px;
+display: flex;
+justify-content: space-around;
+
+
+}
+#nav1 #block1 > .fb > a >img{
+width:25px;
+height: 25px;
+margin: auto;
+}
+
+#nav1 #block1 > .fb > a{
+
+display:inline-flex;
+align-items: center;
+justify-content: space-evenly;
+
+}
+#nav1 #block1 > .fb >p:hover{
+cursor: pointer;
+}
+
+#nav2{
+display:flex;
+justify-content: space-between;
+align-items: center;
+width:95%;
+margin:auto;
+}
+
+#nav2 > #first{
+width: 32%;
+display: inline-flex;
+justify-content: space-between;
+align-items: center;
+/* border: 2px solid red; */
+
+}
+
+#nav2 > #middle  > a{
+width: 150px;
+height: 80px;
+/* border: 2px solid red; */
+margin-right:200px ;
+}
+#nav2 > #last{
+width:200px;
+display:flex;
+justify-content: space-between;
+align-items: center;
+
+}
+
+.dropdown {
+position: relative;
+display: inline-block;
+cursor: pointer;
+
+}
+
+/* .dropdown-product {
+font-size: 16px;
+color: #666;
+text-decoration: none;
+padding: 10px 20px;
+cursor: pointer;
+} */
+.dropdown-product >a{
+text-decoration: none;
+padding: 10px 10px;
+font-size: 20px;
+color: black;
+/* cursor: pointer; */
+}
+
+.dropdown-menu {
+display: none;
+position: absolute;
+top: 100%;
+left: 0;
+z-index: 1;
+background-color: #f2f2f2;
+padding: 10px;
+min-width: 200px;
+box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+/* cursor: pointer; */
+}
+
+
+.dropdown:hover .dropdown-menu {
+display: block;
+
+}
+
+.dropdown-item {
+display: block;
+color: #666;
+text-decoration: none;
+padding: 5px 0;
+}
+
+#nav2 > #last >div > img{
+width:40px;
+height:40px;
+}
+#nav2 > #last >div > a > img{
+width:40px;
+height:40px;
+}
+        #button1{
+            height: 50px;
+            font-size: 20px;
+            background-color: rgb(103, 102, 102);
+            color: white;
+            margin-top: 70px;
+        }
+        #button2{
+            height: 50px;
+            font-size: 20px;
+            background-color: rgb(103, 102, 102);
+            color: white;
+            margin-top: 70px;
+        }
+        #one{
+            margin-top: 70px;
+            box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+            padding-top: 30px;
+            padding-bottom: 30px;
+            width: 50%;
+            
+        }
+        #two{
+            margin-top: 70px;
+            box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+            padding-top: 30px;
+            padding-bottom: 30px;
+            width: 50%;
+        }
+        #three{
+            margin-top: 70px;
+            box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+            padding-top: 30px;
+            padding-bottom: 30px;
+            width: 50%;
+        }
+        #p1{
+            text-align: right;
+        }
+        #cod{
+            background-color: rgb(67, 64, 64);
+            font-size: 20px;
+            width: 200px;
+            color: white;
+            text-decoration: none;
+            padding: 10px 10px 10px 10px;
+        }
+        #cod1{
+            margin-top: 70px;
+        }
+
+        #foot1{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  margin-top: 30px;
+  background-color: rgb(236, 234, 234);
+  width: 100%;
+  padding-left: 175px;
+  margin: auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  box-sizing: border-box;
+}
+a{
+  display: block;
+  text-decoration: none;
+  color:black
+}
+ 
+#foot1 a{
+  margin-top: 30px;
+}
+#foot2{
+  text-align: center;
+  display: flex;
+  justify-content: space-between;
+  margin-left: 300px;
+  margin-right: 300px;
+  margin-top: 70px;
+}
+#nav1 > .footer{
+  width: 20;
+}
+      
+        
+    </style>
 </head>
 <body>
     <div id="nav1">
@@ -77,63 +308,42 @@
             <div><a href="./Addtobag.html"><img src="https://media.istockphoto.com/id/1206806317/vector/shopping-cart-icon-isolated-on-white-background.jpg?s=612x612&w=0&k=20&c=1RRQJs5NDhcB67necQn1WCpJX2YMfWZ4rYi1DFKlkNA=" alt=""></a></div>
         </div>
     </div>
-    <div id="imgShow">
-        <img src="https://cdn.shopify.com/s/files/1/0677/1464/6315/files/George_thomas_artworks4.jpg?v=1676617973" alt="">
+    <button id="button1">Add Adress</button>
+    <button id="button2">Add New Adress</button>
+    </div>
+
+    <div id="one">
+    <h4>Add Card Details</h4>
+    <input type="number" placeholder="card number">
+    <input type="number" placeholder="Expiry date">
+    <input type="number" placeholder=" Enter Cvv">
+    <input type="submit">
+    <input type="number" placeholder="Enter OTP">
+    <input type="submit">
+    </div>
+
+    <div id="two">
+    <h4>Add UPI details</h4>
+    <input type="text" placeholder="enter UPI id">
+    <input type="submit">
+    </div>
+
+    <div id="three">
+    <h4>Using Internet Banking</h4>
+    <select name="" id="">
+        <option value="">Select Bank</option>
+        <option value="">SBI</option>
+        <option value="">BOI</option>
+        <option value="">Axis Bank</option>
+        <option value=""> HDFC Bank</option>
+    </select>
+    </div>
+    <div id="cod1">
+        <a href="" id="cod">CASH ON DELIVERY</a>
 
 
     </div>
 
-    <div id="gridImg">
-        <div>
-            <img src="https://cdn.shopify.com/s/files/1/0677/1464/6315/files/artist_edite_sections_3.jpg?v=1677675569&width=533" alt="">
-        </div>
-        <div> 
-        <img src="https://cdn.shopify.com/s/files/1/0677/1464/6315/files/artist_edite_sections_re-01.jpg?v=1675945931&width=533" alt="">    
-        </div>
-        <div>
-            <img src="https://cdn.shopify.com/s/files/1/0677/1464/6315/files/neverlechew-05a_7497cf47-cebb-4dda-a282-f977bab2532f.jpg?v=1675862765&width=533" alt="">
-        </div>
-    </div>
-
-    <p class="george">George Thomas</p>
-
-    <div id="george">
-        <div>
-            <img src="https://cdn.shopify.com/s/files/1/0677/1464/6315/products/back_3ff1bfa4-bfa9-4dfa-ae9a-88e16c339e49.png?v=1677043660" alt="">
-            <p>KOOVS</p>
-            <h3>Say Yes to Nugs Long T-shirt Dress</h3>
-            <h3>Rs. 1,890.00</h3>
-            <button><h4>AddToCart</h4></button>
-        </div>
-
-        <div> 
-            <img src="https://cdn.shopify.com/s/files/1/0677/1464/6315/products/front_2PSD.png?v=1675425175" alt="">
-            <p>KOOVS</p>
-            <h3>Bless My Feed T-shirt (Sushi)</h3>
-            <h3>Rs. 1,690.00</h3>
-            <button><h4>AddToCart</h4></button>
-        </div>
-
-        <div>
-            <img src="https://cdn.shopify.com/s/files/1/0677/1464/6315/products/front_d96474c0-bd55-41ce-8d38-7e13404dbd3b.png?v=1675420104" alt="">
-            <p>KOOVS</p>
-            <h3>Bless My Feed Hoodie</h3>
-            <h3>Rs. 1,890.00</h3>
-            <button><h4>AddToCart</h4></button>
-        </div>
-
-        <div>  
-            <img src="https://cdn.shopify.com/s/files/1/0677/1464/6315/products/front_85ec7ddc-c341-4429-8f32-8b17e9561aab.png?v=1675425990" alt="">
-            <p>KOOVS</p>
-            <h3>Bless My Feed Coin T-shirt </h3>
-            <h3>Rs. 1,690.00</h3>
-            <button><h4>AddToCart</h4></button>
-        
-        </div>
-    </div>
-
-    <a id="viewAl" href="./product.html" target="_blank"><button class="viewAll">View all</button></a>
-    
 
     <div id="foot1">
         <div>
@@ -181,5 +391,4 @@
     </div>
 
 </body>
-<script src="./index.js"></script>
 </html>
