@@ -408,23 +408,30 @@ a{
     // let date=document.querySelector(".date")
     let otp=document.querySelector(".otp")
     let one=document.getElementById("one")
+                 
+    var inputDate = new Date(document.querySelector(".date").value);
+              var currentDate = new Date();
+    let flag=false;
     function fun(){
         if(cardNumber.value.length !==16){
             alert("please enter your 16 digit Card Number")
         }
       
                     
-              var inputDate = new Date(document.querySelector(".date").value);
-              var currentDate = new Date();
+            //   var inputDate = new Date(document.querySelector(".date").value);
+            //   var currentDate = new Date();
 
-              if (inputDate < currentDate) {
+             else if (inputDate < currentDate) {
              alert("Expiry card date")
               }
         
 
 
-        if(cvv.value.length!==3){
+        else if(cvv.value.length!==3){
             alert("please enter correct CVV")
+        }else{
+            alert("Enter Your 6 digit Otp")
+            flag=true;
         }
     }
 
@@ -433,6 +440,12 @@ a{
             alert("Invalid otp, Please enter your 6 digit Otp")
 
             
+        }else{
+           if(flag==true){
+            alert("Your payment is Done")
+           }else{
+            alert("Enter Your Card details")
+           }
         }
     }
 
