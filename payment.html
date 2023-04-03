@@ -11,6 +11,13 @@
 margin:0px;
 padding: 0px;
 box-sizing: border-box;
+text-align: center;
+
+}
+
+#one,#two,#three,#cod{
+    margin: auto;
+    background-color: #999595;
 }
 
 #nav1{
@@ -314,12 +321,16 @@ a{
 
     <div id="one">
     <h4>Add Card Details</h4>
-    <input type="number" placeholder="card number">
-    <input type="number" placeholder="Expiry date">
-    <input type="number" placeholder=" Enter Cvv">
-    <input type="submit">
-    <input type="number" placeholder="Enter OTP">
-    <input type="submit">
+    <input type="text" id="card-name" placeholder="Name">
+    <input class="cardNumber" id="card-number" type="number" placeholder="card number">
+    <input class="date" id="card-expiry" type="date" placeholder="Expiry date">
+
+    <input class="cvv"  type="number" placeholder=" Enter Cvv">
+    <input onclick="fun()" type="submit">
+    <input class="otp" type="number" placeholder="Enter OTP">
+    <input  onclick="fun2()" type="submit">
+    <button id="save-card-button" onclick="saveCard()">Save Card</button>
+
     </div>
 
     <div id="two">
@@ -391,4 +402,70 @@ a{
     </div>
 
 </body>
+<script>
+    let cvv=document.querySelector(".cvv")
+    let cardNumber=document.querySelector(".cardNumber")
+    // let date=document.querySelector(".date")
+    let otp=document.querySelector(".otp")
+    let one=document.getElementById("one")
+    function fun(){
+        if(cardNumber.value.length !==16){
+            alert("please enter your 16 digit Card Number")
+        }
+      
+                    
+              var inputDate = new Date(document.querySelector(".date").value);
+              var currentDate = new Date();
+
+              if (inputDate < currentDate) {
+             alert("Expiry card date")
+              }
+        
+
+
+        if(cvv.value.length!==3){
+            alert("please enter correct CVV")
+        }
+    }
+
+    function fun2(){
+        if(otp.value.length !==6){
+            alert("Invalid otp, Please enter your 6 digit Otp")
+
+            
+        }
+    }
+
+    var savedCards = [];
+
+function saveCard() {
+  // Get the card data from the form
+  var cardNumber = document.getElementById("card-number").value;
+  var cardName = document.getElementById("card-name").value;
+  var cardExpiry = document.getElementById("card-expiry").value;
+
+  // Create an object to store the card data
+  var card = {
+    number: cardNumber,
+    name: cardName,
+    expiry: cardExpiry
+  };
+
+  // Check if the card is already saved
+  var existingCard = savedCards.find(function(c) {
+    return c.number === cardNumber && c.name === cardName && c.expiry === cardExpiry;
+  });
+
+  if (existingCard) {
+    // If the card is already saved, show an alert
+    alert("This card is already saved.");
+  } else {
+    // If the card is not saved yet, add it to the list of saved cards
+    savedCards.push(card);
+    
+    alert(`Card saved successfully.`);
+  }
+}
+
+</script>
 </html>

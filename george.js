@@ -162,7 +162,13 @@ let arr =[
     },
 
 ]
+let LsData=localStorage.getItem("product")
+if(LsData==null){
 
+    LsData=[]
+}else{
+    LsData=JSON.parse(LsData)
+}
 let container=document.getElementById("container")
 
 arr.forEach(element => {
@@ -181,6 +187,12 @@ arr.forEach(element => {
 
     let addToCart=document.createElement("button")
     addToCart.innerText="AddToCart"
+    addToCart.addEventListener("Click",function(e){
+        alert("product is Added")
+        LsData.push(e)
+        // alert("product is Added")
+        localStorage.setItem("product",JSON.stringify(LsData))
+    })
 
     
 
