@@ -187,6 +187,10 @@ a{
 #nav1 > .footer{
   width: 20
 }
+#anchor{
+    text-align: center;
+    
+}
     
     </style>
 </head>
@@ -363,12 +367,17 @@ display(lsdata)
         let total=0
         for(let i=0;i<data.length;i++)
         {   
-            total+=data[i].price*data[i].quantity
+            total+=data[i].price*data[i].quantity;
+            // if(data[i].quantity==0){
+            //     total=0
+            // }
         }
         let quantity = document.getElementById("quantity")
         quantity.innerText="Total:-"+total
         quantity.style.backgroundColor="black"
         quantity.style.color="white"
+        quantity.style.fontSize="25px"
+        quantity.style.textAlign="center"
    
     
 

@@ -15,10 +15,11 @@ function login(event){
         }
     }
     if(flag===true){
-        alert("login successful")
+        alert("Welcome to KOOVS")
         window.location.href="./index.html"
     }else{
-        alert("please check email/password")
+
+        alert(" if you are already created account please check email or password")
     }
 
 }
